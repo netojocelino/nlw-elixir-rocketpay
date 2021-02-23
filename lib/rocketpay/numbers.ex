@@ -17,7 +17,7 @@ defmodule Rocketpay.Numbers do
         |> Stream.map(fn number -> String.to_integer(number) end)
         |> Enum.sum()
 
-    {:ok, %{ result: numbers_sum_list }}
+    {:ok, %{ result: result }}
   end
 
   defp handle_file({:error, _reason}), do: {:error, %{message: "Invalid file!"}}
