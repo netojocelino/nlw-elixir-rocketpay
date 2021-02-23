@@ -11,13 +11,11 @@ defmodule Rocketpay.Numbers do
   end
 
   defp handle_file({:ok, result}) do
-    numbers_string_list = String.split(result, ",")
-
-    numbers_int_list = Enum.map(numbers_string_list,
-      fn number -> String.to_integer(number) end
-    )
-
-    numbers_sum_list = Enum.sum(numbers_int_list)
+    result =
+      result
+        |> String.split(",")
+        |> Stream.map(fn number -> String.to_integer(number) end)
+        |> Enum.sum()
 
     {:ok, %{ result: numbers_sum_list }}
   end
