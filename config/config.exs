@@ -26,7 +26,7 @@ config :rocketpay, Rocketpay.Repo,
 # Configures Authentication
 config :rocketpay, :basic_auth,
   username: "admin",
-  password: "not_secret_:basic_auth.passoword"
+  password: "not_secret_basic_auth.passoword"
 
 # Configures Elixir's Logger
 config :logger, :console,
