@@ -48,7 +48,7 @@ defmodule RocketpayWeb.AccountsControllerTest do
       expected_response = %{
         "message" => "Invalid operation value"
       }
-      assert response == response
+      assert expected_response == response
     end
 
 
